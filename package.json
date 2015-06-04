@@ -1,0 +1,15 @@
+{
+  "name": "angular-2-metal-browser",
+  "version": "0.0.0",
+  "description": "Browse metal genres using angular 2 and the spotify api.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular-2",
+    "spotify-api"
+  ],
+  "author": "nicojs",
+  "license": "ISC"
+}

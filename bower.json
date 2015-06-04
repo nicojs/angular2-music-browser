@@ -1,0 +1,21 @@
+{
+  "name": "angular-2-metal-browser",
+  "version": "0.0.0",
+  "authors": [
+    "nicojs"
+  ],
+  "description": "Browse metal genres using angular 2 and the spotify api.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "fetch": "~0.8.2"
+  }
+}
