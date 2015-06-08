@@ -18,8 +18,18 @@ import MusicGenreComponent from 'MusicGenreComponent';
     <h1>Welcome to the music browser</h1>
     <p>Using AngularJS2 to crawl the spotify api</p>
     </div>
+    <div class="row">
+    <div class="col-md-12">
+    <div class="input-group">
+    <input #new-genre-input (keyup) type="text" class="form-control input-lg" placeholder="Add a music genre..."> 
+    <span class="input-group-btn">
+    <button (click)="addGenre(newGenreInput.value)" class="btn btn-success btn-lg" type="button">
+    <i class="glyphicon glyphicon-plus"></i></span>
+    </div>
+    </div>
+    </div>
     <tabs>
-        <tab *for="#genre of genres" [tab-title]="genre.name + ' (' + genre.artists.length + ')'">
+        <tab *for="#genre of genres" [tab-title]="genre.name + ' (' + genre.artistCount + ')'">
             <music-genre [genre]="genre"></music-genre>
         </tab>
     </tabs>
@@ -37,6 +47,10 @@ class MetalBrowserComponent {
         this.genres.forEach(genre => genre.isActive = false);
         genre.isActive = true;
         return false;
+    }
+    
+    addGenre(name: string){
+        this.genres.push(new MusicGenre(name));
     }
 }
 
