@@ -5,10 +5,16 @@
 import {Component, View} from 'angular2/angular2';
 
 @Component({
-    selector: 'music-band'
+    selector: 'music-band',
+    properties: {
+        artist: 'artist'
+    }
 })
 @View({
-    template:''
+    template:`<div>
+        <h3>{{artist.name}}</h3>
+        <img class="img-responsive" [src]="artist.imageUrl">
+    </div>`
 })
 export default
 class MusicBandComponent {

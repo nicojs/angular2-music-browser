@@ -15,8 +15,8 @@ import MusicGenre from 'model/MusicGenre';
     template: `
         <div class="row">
         <h2>{{genre.name}}</h2>
-        <div *for="#band of genre.bands" class="col-md-3">
-        {{band}}
+        <div *for="#artist of genre.artists" class="col-md-3">
+            <music-band [artist]="artist"></music-band>
         </div>
         </div>
     `,
@@ -25,4 +25,7 @@ import MusicGenre from 'model/MusicGenre';
 export default
 class MusicGenreComponent {
     genre: MusicGenre;
+    constructor(){
+        console.log(this.genre);
+    }
 }
