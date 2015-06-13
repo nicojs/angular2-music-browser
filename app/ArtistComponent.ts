@@ -12,8 +12,10 @@ import {Component, View} from 'angular2/angular2';
 })
 @View({
     template:`<div>
+        <a target="_blank" [href]="artist.url">
         <h3>{{artist.name}}</h3>
         <img class="img-responsive" [src]="artist.imageUrl">
+        </a>
     </div>`
 })
 export default

@@ -24,7 +24,7 @@ var ArtistComponent = (function () {
             ]
         }),
         angular2_1.View({
-            template: "<div>\n        <h3>{{artist.name}}</h3>\n        <img class=\"img-responsive\" [src]=\"artist.imageUrl\">\n    </div>"
+            template: "<div>\n        <a target=\"_blank\" [href]=\"artist.url\">\n        <h3>{{artist.name}}</h3>\n        <img class=\"img-responsive\" [src]=\"artist.imageUrl\">\n        </a>\n    </div>"
         }), 
         __metadata('design:paramtypes', [])
     ], ArtistComponent);
