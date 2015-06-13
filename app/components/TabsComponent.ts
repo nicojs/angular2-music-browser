@@ -1,7 +1,7 @@
 /**
  * Created by nicojs on 5/31/2015.
  */
-import {Component, View, NgFor as For} from 'angular2/angular2';
+import {Component, View, NgFor} from 'angular2/angular2';
 import TabComponent from 'components/TabComponent';
 
 @Component({
@@ -16,7 +16,7 @@ import TabComponent from 'components/TabComponent';
     </ul>
     <content></content>
   `,
-    directives: [For]
+    directives: [NgFor]
 })
 
 export default

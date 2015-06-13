@@ -15,10 +15,6 @@ import NewGenreFormComponent from 'NewGenreFormComponent';
 })
 @View({
     template: `
-    <div class="jumbotron">
-    <h1>Welcome to the music browser</h1>
-    <p>Using AngularJS2 to crawl the spotify api</p>
-    </div>
     <div class="row">
     <div class="col-md-12">
         <new-genre-form />
@@ -45,9 +41,6 @@ class MusicBrowserComponent {
         return false;
     }
     
-    addGenre(name: string){
-        this.genres.push(new MusicGenre(name));
-    }
 }
 
 bootstrap(MusicBrowserComponent);

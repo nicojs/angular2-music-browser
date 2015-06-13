@@ -11,7 +11,6 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
 };
 /// <reference path="typings/angular2/angular2.d.ts" />
 var angular2_1 = require('angular2/angular2');
-var MusicGenre_1 = require('model/MusicGenre');
 var MusicGenreService_1 = require('services/MusicGenreService');
 var TabsComponent_1 = require('components/TabsComponent');
 var TabComponent_1 = require('components/TabComponent');
@@ -26,16 +25,13 @@ var MusicBrowserComponent = (function () {
         genre.isActive = true;
         return false;
     };
-    MusicBrowserComponent.prototype.addGenre = function (name) {
-        this.genres.push(new MusicGenre_1.default(name));
-    };
     MusicBrowserComponent = __decorate([
         angular2_1.Component({
             selector: 'music-browser',
             appInjector: [MusicGenreService_1.default]
         }),
         angular2_1.View({
-            template: "\n    <div class=\"jumbotron\">\n    <h1>Welcome to the music browser</h1>\n    <p>Using AngularJS2 to crawl the spotify api</p>\n    </div>\n    <div class=\"row\">\n    <div class=\"col-md-12\">\n        <new-genre-form />\n    </div>\n    </div>\n    <tabs>\n        <tab *ng-for=\"#genre of genres\" [tab-title]=\"genre.name + ' (' + genre.artistCount + ')'\">\n            <music-genre [genre]=\"genre\"></music-genre>\n        </tab>\n    </tabs>\n    ",
+            template: "\n    <div class=\"row\">\n    <div class=\"col-md-12\">\n        <new-genre-form />\n    </div>\n    </div>\n    <tabs>\n        <tab *ng-for=\"#genre of genres\" [tab-title]=\"genre.name + ' (' + genre.artistCount + ')'\">\n            <music-genre [genre]=\"genre\"></music-genre>\n        </tab>\n    </tabs>\n    ",
             directives: [TabsComponent_1.default, TabComponent_1.default, angular2_1.NgFor, MusicGenreComponent_1.default, NewGenreFormComponent_1.default]
         }), 
         __metadata('design:paramtypes', [MusicGenreService_1.default])
