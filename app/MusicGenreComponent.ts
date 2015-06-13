@@ -2,7 +2,7 @@
  * Created by nicojs on 6/2/2015.
  */
 import {Component, View, NgFor} from 'angular2/angular2';
-import MusicBandComponent from 'MusicBandComponent';
+import ArtistComponent from 'ArtistComponent';
 import MusicGenre from 'model/MusicGenre';
 
 @Component({
@@ -16,11 +16,11 @@ import MusicGenre from 'model/MusicGenre';
         <div class="row">
         <h2>{{genre.name}}</h2>
         <div *ng-for="#artist of genre.artists" class="col-md-3">
-            <music-band [artist]="artist"></music-band>
+            <artist [artist]="artist"></music-band>
         </div>
         </div>
     `,
-    directives: [MusicBandComponent, NgFor]
+    directives: [ArtistComponent, NgFor]
 })
 export default
 class MusicGenreComponent {

@@ -10,7 +10,7 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var MusicBandComponent_1 = require('MusicBandComponent');
+var ArtistComponent_1 = require('ArtistComponent');
 var MusicGenreComponent = (function () {
     function MusicGenreComponent() {
     }
@@ -22,8 +22,8 @@ var MusicGenreComponent = (function () {
             ]
         }),
         angular2_1.View({
-            template: "\n        <div class=\"row\">\n        <h2>{{genre.name}}</h2>\n        <div *ng-for=\"#artist of genre.artists\" class=\"col-md-3\">\n            <music-band [artist]=\"artist\"></music-band>\n        </div>\n        </div>\n    ",
-            directives: [MusicBandComponent_1.default, angular2_1.NgFor]
+            template: "\n        <div class=\"row\">\n        <h2>{{genre.name}}</h2>\n        <div *ng-for=\"#artist of genre.artists\" class=\"col-md-3\">\n            <artist [artist]=\"artist\"></music-band>\n        </div>\n        </div>\n    ",
+            directives: [ArtistComponent_1.default, angular2_1.NgFor]
         }), 
         __metadata('design:paramtypes', [])
     ], MusicGenreComponent);

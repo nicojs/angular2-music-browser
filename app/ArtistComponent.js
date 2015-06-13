@@ -13,12 +13,12 @@ if (typeof __metadata !== "function") __metadata = function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var MusicBandComponent = (function () {
-    function MusicBandComponent() {
+var ArtistComponent = (function () {
+    function ArtistComponent() {
     }
-    MusicBandComponent = __decorate([
+    ArtistComponent = __decorate([
         angular2_1.Component({
-            selector: 'music-band',
+            selector: 'artist',
             properties: [
                 'artist: artist'
             ]
@@ -27,7 +27,7 @@ var MusicBandComponent = (function () {
             template: "<div>\n        <h3>{{artist.name}}</h3>\n        <img class=\"img-responsive\" [src]=\"artist.imageUrl\">\n    </div>"
         }), 
         __metadata('design:paramtypes', [])
-    ], MusicBandComponent);
-    return MusicBandComponent;
+    ], ArtistComponent);
+    return ArtistComponent;
 })();
-exports.default = MusicBandComponent;
+exports.default = ArtistComponent;

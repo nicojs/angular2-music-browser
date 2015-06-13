@@ -5,7 +5,7 @@
 import {Component, View} from 'angular2/angular2';
 
 @Component({
-    selector: 'music-band',
+    selector: 'artist',
     properties: [
         'artist: artist'
     ]
@@ -17,5 +17,5 @@ import {Component, View} from 'angular2/angular2';
     </div>`
 })
 export default
-class MusicBandComponent {
+class ArtistComponent {
 }
