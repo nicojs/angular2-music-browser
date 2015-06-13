@@ -36,7 +36,7 @@ import MusicGenreComponent from 'MusicGenreComponent';
     `,
     directives: [TabsComponent, TabComponent, NgFor, MusicGenreComponent]
 })
-class MetalBrowserComponent {
+class MusicBrowserComponent {
     genres:Array<MusicGenre>;
 
     constructor(musicGenreService: MusicGenreService) {
@@ -54,4 +54,4 @@ class MetalBrowserComponent {
     }
 }
 
-bootstrap(MetalBrowserComponent);
+bootstrap(MusicBrowserComponent);

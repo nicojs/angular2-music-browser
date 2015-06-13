@@ -16,19 +16,19 @@ var MusicGenreService_1 = require('services/MusicGenreService');
 var TabsComponent_1 = require('components/TabsComponent');
 var TabComponent_1 = require('components/TabComponent');
 var MusicGenreComponent_1 = require('MusicGenreComponent');
-var MetalBrowserComponent = (function () {
-    function MetalBrowserComponent(musicGenreService) {
+var MusicBrowserComponent = (function () {
+    function MusicBrowserComponent(musicGenreService) {
         this.genres = musicGenreService.genres;
     }
-    MetalBrowserComponent.prototype.activateGenre = function (genre) {
+    MusicBrowserComponent.prototype.activateGenre = function (genre) {
         this.genres.forEach(function (genre) { return genre.isActive = false; });
         genre.isActive = true;
         return false;
     };
-    MetalBrowserComponent.prototype.addGenre = function (name) {
+    MusicBrowserComponent.prototype.addGenre = function (name) {
         this.genres.push(new MusicGenre_1.default(name));
     };
-    MetalBrowserComponent = __decorate([
+    MusicBrowserComponent = __decorate([
         angular2_1.Component({
             selector: 'music-browser',
             appInjector: [MusicGenreService_1.default]
@@ -38,7 +38,7 @@ var MetalBrowserComponent = (function () {
             directives: [TabsComponent_1.default, TabComponent_1.default, angular2_1.NgFor, MusicGenreComponent_1.default]
         }), 
         __metadata('design:paramtypes', [MusicGenreService_1.default])
-    ], MetalBrowserComponent);
-    return MetalBrowserComponent;
+    ], MusicBrowserComponent);
+    return MusicBrowserComponent;
 })();
-angular2_1.bootstrap(MetalBrowserComponent);
+angular2_1.bootstrap(MusicBrowserComponent);
