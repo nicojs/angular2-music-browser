@@ -13,7 +13,7 @@ bower install
 cd app
 tsc -w & live-server
 ```
-I found live-server an excalent tool to have a simple live reload server for development.
+I found live-server an excelent tool to have a simple live reload server for development.
 The typescript compile command (tsc -w) will start the typescript compiler. It will watch for any file changes (-w). Also, it will use the tsconfig.json file to read the rest of the config. 
 
 What's this about
