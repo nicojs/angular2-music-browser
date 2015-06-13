@@ -6,9 +6,9 @@ import {Component, View} from 'angular2/angular2';
 
 @Component({
     selector: 'music-band',
-    properties: {
-        artist: 'artist'
-    }
+    properties: [
+        'artist: artist'
+    ]
 })
 @View({
     template:`<div>

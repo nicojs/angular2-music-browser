@@ -6,9 +6,9 @@ import TabsComponent from 'components/TabsComponent';
 
 @Component({
     selector: 'tab',
-    properties: {
-        'tabTitle': 'tab-title'
-    }
+    properties: [
+        'tabTitle: tab-title'
+    ]
 })
 @View({
     template: `
@@ -17,7 +17,7 @@ import TabsComponent from 'components/TabsComponent';
 })
 export default
 class TabComponent {
-
+    
     isActive:boolean;
 
     constructor(@Parent() tabs:TabsComponent) {

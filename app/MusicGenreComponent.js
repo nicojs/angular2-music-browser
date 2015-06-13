@@ -13,18 +13,17 @@ var angular2_1 = require('angular2/angular2');
 var MusicBandComponent_1 = require('MusicBandComponent');
 var MusicGenreComponent = (function () {
     function MusicGenreComponent() {
-        console.log(this.genre);
     }
     MusicGenreComponent = __decorate([
         angular2_1.Component({
             selector: 'music-genre',
-            properties: {
-                genre: 'genre'
-            }
+            properties: [
+                'genre: genre'
+            ]
         }),
         angular2_1.View({
-            template: "\n        <div class=\"row\">\n        <h2>{{genre.name}}</h2>\n        <div *for=\"#artist of genre.artists\" class=\"col-md-3\">\n            <music-band [artist]=\"artist\"></music-band>\n        </div>\n        </div>\n    ",
-            directives: [MusicBandComponent_1.default, angular2_1.For]
+            template: "\n        <div class=\"row\">\n        <h2>{{genre.name}}</h2>\n        <div *ng-for=\"#artist of genre.artists\" class=\"col-md-3\">\n            <music-band [artist]=\"artist\"></music-band>\n        </div>\n        </div>\n    ",
+            directives: [MusicBandComponent_1.default, angular2_1.NgFor]
         }), 
         __metadata('design:paramtypes', [])
     ], MusicGenreComponent);

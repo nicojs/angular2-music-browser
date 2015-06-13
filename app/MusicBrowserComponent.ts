@@ -1,5 +1,5 @@
 /// <reference path="typings/angular2/angular2.d.ts" />
-import {Component, View, bootstrap, For} from 'angular2/angular2';
+import {Component, View, bootstrap, NgFor} from 'angular2/angular2';
 import MusicGenre from 'model/MusicGenre';
 import MusicGenreService from 'services/MusicGenreService';
 import TabsComponent from 'components/TabsComponent';
@@ -10,7 +10,7 @@ import MusicGenreComponent from 'MusicGenreComponent';
 // Annotation section
 @Component({
     selector: 'music-browser',
-    injectables: [MusicGenreService]
+    appInjector: [MusicGenreService]
 })
 @View({
     template: `
@@ -29,12 +29,12 @@ import MusicGenreComponent from 'MusicGenreComponent';
     </div>
     </div>
     <tabs>
-        <tab *for="#genre of genres" [tab-title]="genre.name + ' (' + genre.artistCount + ')'">
+        <tab *ng-for="#genre of genres" [tab-title]="genre.name + ' (' + genre.artistCount + ')'">
             <music-genre [genre]="genre"></music-genre>
         </tab>
     </tabs>
     `,
-    directives: [TabsComponent, TabComponent, For, MusicGenreComponent]
+    directives: [TabsComponent, TabComponent, NgFor, MusicGenreComponent]
 })
 class MetalBrowserComponent {
     genres:Array<MusicGenre>;

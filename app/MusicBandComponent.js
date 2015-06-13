@@ -19,9 +19,9 @@ var MusicBandComponent = (function () {
     MusicBandComponent = __decorate([
         angular2_1.Component({
             selector: 'music-band',
-            properties: {
-                artist: 'artist'
-            }
+            properties: [
+                'artist: artist'
+            ]
         }),
         angular2_1.View({
             template: "<div>\n        <h3>{{artist.name}}</h3>\n        <img class=\"img-responsive\" [src]=\"artist.imageUrl\">\n    </div>"

@@ -21,9 +21,9 @@ var TabComponent = (function () {
     TabComponent = __decorate([
         angular2_1.Component({
             selector: 'tab',
-            properties: {
-                'tabTitle': 'tab-title'
-            }
+            properties: [
+                'tabTitle: tab-title'
+            ]
         }),
         angular2_1.View({
             template: "\n    <div [hidden]=\"!isActive\">    <content></content></div>\n    "

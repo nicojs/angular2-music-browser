@@ -31,11 +31,11 @@ var MetalBrowserComponent = (function () {
     MetalBrowserComponent = __decorate([
         angular2_1.Component({
             selector: 'music-browser',
-            injectables: [MusicGenreService_1.default]
+            appInjector: [MusicGenreService_1.default]
         }),
         angular2_1.View({
-            template: "\n    <div class=\"jumbotron\">\n    <h1>Welcome to the music browser</h1>\n    <p>Using AngularJS2 to crawl the spotify api</p>\n    </div>\n    <div class=\"row\">\n    <div class=\"col-md-12\">\n    <div class=\"input-group\">\n    <input #new-genre-input (keyup) type=\"text\" class=\"form-control input-lg\" placeholder=\"Add a music genre...\"> \n    <span class=\"input-group-btn\">\n    <button (click)=\"addGenre(newGenreInput.value)\" class=\"btn btn-success btn-lg\" type=\"button\">\n    <i class=\"glyphicon glyphicon-plus\"></i></span>\n    </div>\n    </div>\n    </div>\n    <tabs>\n        <tab *for=\"#genre of genres\" [tab-title]=\"genre.name + ' (' + genre.artistCount + ')'\">\n            <music-genre [genre]=\"genre\"></music-genre>\n        </tab>\n    </tabs>\n    ",
-            directives: [TabsComponent_1.default, TabComponent_1.default, angular2_1.For, MusicGenreComponent_1.default]
+            template: "\n    <div class=\"jumbotron\">\n    <h1>Welcome to the music browser</h1>\n    <p>Using AngularJS2 to crawl the spotify api</p>\n    </div>\n    <div class=\"row\">\n    <div class=\"col-md-12\">\n    <div class=\"input-group\">\n    <input #new-genre-input (keyup) type=\"text\" class=\"form-control input-lg\" placeholder=\"Add a music genre...\"> \n    <span class=\"input-group-btn\">\n    <button (click)=\"addGenre(newGenreInput.value)\" class=\"btn btn-success btn-lg\" type=\"button\">\n    <i class=\"glyphicon glyphicon-plus\"></i></span>\n    </div>\n    </div>\n    </div>\n    <tabs>\n        <tab *ng-for=\"#genre of genres\" [tab-title]=\"genre.name + ' (' + genre.artistCount + ')'\">\n            <music-genre [genre]=\"genre\"></music-genre>\n        </tab>\n    </tabs>\n    ",
+            directives: [TabsComponent_1.default, TabComponent_1.default, angular2_1.NgFor, MusicGenreComponent_1.default]
         }), 
         __metadata('design:paramtypes', [MusicGenreService_1.default])
     ], MetalBrowserComponent);

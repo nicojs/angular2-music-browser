@@ -28,8 +28,8 @@ var TabsComponent = (function () {
             selector: 'tabs'
         }),
         angular2_1.View({
-            template: "\n     <ul class=\"nav nav-tabs nav-justified\">\n        <li [class.active]=\"tab.isActive\" *for=\"#tab of tabs\">\n            <a (click)=\"activateTab(tab)\" href=\"\">{{ tab.tabTitle }}</a>\n        </li>\n    </ul>\n    <content></content>\n  ",
-            directives: [angular2_1.For]
+            template: "\n     <ul class=\"nav nav-tabs nav-justified\">\n        <li [class.active]=\"tab.isActive\" *ng-for=\"#tab of tabs\">\n            <a (click)=\"activateTab(tab)\" href=\"\">{{ tab.tabTitle }}</a>\n        </li>\n    </ul>\n    <content></content>\n  ",
+            directives: [angular2_1.NgFor]
         }), 
         __metadata('design:paramtypes', [])
     ], TabsComponent);

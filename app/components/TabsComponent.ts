@@ -1,7 +1,7 @@
 /**
  * Created by nicojs on 5/31/2015.
  */
-import {Component, View, For} from 'angular2/angular2';
+import {Component, View, NgFor as For} from 'angular2/angular2';
 import TabComponent from 'components/TabComponent';
 
 @Component({
@@ -10,7 +10,7 @@ import TabComponent from 'components/TabComponent';
 @View({
     template: `
      <ul class="nav nav-tabs nav-justified">
-        <li [class.active]="tab.isActive" *for="#tab of tabs">
+        <li [class.active]="tab.isActive" *ng-for="#tab of tabs">
             <a (click)="activateTab(tab)" href="">{{ tab.tabTitle }}</a>
         </li>
     </ul>
