@@ -5,6 +5,7 @@ import MusicGenreService from 'services/MusicGenreService';
 import TabsComponent from 'components/TabsComponent';
 import TabComponent from 'components/TabComponent';
 import MusicGenreComponent from 'MusicGenreComponent';
+import NewGenreFormComponent from 'NewGenreFormComponent';
 
 
 // Annotation section
@@ -20,12 +21,7 @@ import MusicGenreComponent from 'MusicGenreComponent';
     </div>
     <div class="row">
     <div class="col-md-12">
-    <div class="input-group">
-    <input #new-genre-input (keyup) type="text" class="form-control input-lg" placeholder="Add a music genre..."> 
-    <span class="input-group-btn">
-    <button (click)="addGenre(newGenreInput.value)" class="btn btn-success btn-lg" type="button">
-    <i class="glyphicon glyphicon-plus"></i></span>
-    </div>
+        <new-genre-form />
     </div>
     </div>
     <tabs>
@@ -34,7 +30,7 @@ import MusicGenreComponent from 'MusicGenreComponent';
         </tab>
     </tabs>
     `,
-    directives: [TabsComponent, TabComponent, NgFor, MusicGenreComponent]
+    directives: [TabsComponent, TabComponent, NgFor, MusicGenreComponent, NewGenreFormComponent]
 })
 class MusicBrowserComponent {
     genres:Array<MusicGenre>;
