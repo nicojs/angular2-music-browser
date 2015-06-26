@@ -2,6 +2,7 @@ Angular 2 music browser
 =======================
 *Using angular 2 with Typescript to call the Spotify api*
 
+
 Getting started
 ----
 Execute the following commands to get started.
@@ -15,6 +16,11 @@ tsc -w & live-server
 ```
 I found live-server an excelent tool to have a simple live reload server for development.
 The typescript compile command (tsc -w) will start the typescript compiler. It will watch for any file changes (-w). Also, it will use the tsconfig.json file to read the rest of the config. 
+
+See me in action
+-----
+[![Explanation on youtube](youtube.png "Logo Title Text 1")](https://www.youtube.com/watch?v=QYqv0Yrsjq4)
+
 
 What's this about
 ----
